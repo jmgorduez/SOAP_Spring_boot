@@ -5,19 +5,28 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+
+import java.io.Serializable;
 
 import static com.gestorinc.ws.util.Constants.STUDENT_TABLE_NAME;
 
-@Entity(name = STUDENT_TABLE_NAME)
+@Entity()
+@Table(name = STUDENT_TABLE_NAME)
 @AllArgsConstructor
 @NoArgsConstructor
-public class StudentDTO {
-    @Id @Getter @Setter
+public class StudentDTO implements Serializable {
+    @Id
+    @Getter
+    @Setter
+    @Column
     private String name;
-    @Getter @Setter
-    private int standard;
-    @Getter @Setter
+    @Getter
+    @Setter
+    @Column
+    private Integer standard;
+    @Getter
+    @Setter
+    @Column
     private String address;
 }

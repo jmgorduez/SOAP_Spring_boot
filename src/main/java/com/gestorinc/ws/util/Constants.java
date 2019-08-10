@@ -18,6 +18,9 @@ public class Constants {
     public static final String STUDENT_TABLE_NAME = "student";
     public static final String SUCCESS = "SUCCESS";
     public static final String STUDENT_XSD = "xsds/student.xsd";
+    public static final String GET_STUDENT_NAME_AT = "GET_STUDENT_NAME_AT";
+    public static final String GET_STUDENT_AT = "GET_STUDENT_AT";
+    public static final String INDEX = "index";
 
     private static Map<String, StudentDTO> generateStudents(){
         Map<String, StudentDTO> students = new HashMap<>();
